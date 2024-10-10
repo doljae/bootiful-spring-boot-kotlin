@@ -1,0 +1,25 @@
+services:
+  pgvector:
+    image: "pgvector/pgvector:pg16"
+    environment:
+      - PGUSER=postgres
+      - PGPASSWORD=postgres
+      - PGDATABASE=postgres
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_DB=postgres
+    labels:
+      - "org.springframework.boot.service-connection=postgres"
+    ports:
+      - "5432:5432"
+  ollama:
+    image: ollama/ollama:latest
+    ports:
+      - "7869:11434"
+    container_name: ollama
+    pull_policy: always
+    tty: true
+    restart: always
+    environment:
+      - OLLAMA_KEEP_ALIVE=24h
+      - OLLAMA_HOST=0.0.0.0

@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: joshlong-spring-demo-kotlin
+  ai:
+    vectorstore:
+      pgvector:
+        initialize-schema: true
+  datasource:
+    url: jdbc:postgresql://localhost:5432/postgres
+    username: postgres
+    password: postgres
+    driver-class-name: org.postgresql.Driver
+  docker:
+    compose:
+      lifecycle-management: start_and_stop
+      file: compose.yml
