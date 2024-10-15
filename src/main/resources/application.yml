@@ -5,6 +5,11 @@ spring:
     vectorstore:
       pgvector:
         initialize-schema: true
+    ollama:
+      chat:
+        model: all-minilm # Ref: https://github.com/spring-projects/spring-ai/issues/840
+      embedding:
+        model: all-minilm
   datasource:
     url: jdbc:postgresql://localhost:5432/postgres
     username: postgres
@@ -13,4 +18,4 @@ spring:
   docker:
     compose:
       lifecycle-management: start_and_stop
-      file: compose.yml
+      file: docker/compose.yml
