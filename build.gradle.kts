@@ -3,6 +3,7 @@ plugins {
     kotlin("plugin.spring") version "1.9.25"
     id("org.springframework.boot") version "3.3.4"
     id("io.spring.dependency-management") version "1.1.6"
+    id("org.graalvm.buildtools.native") version "0.10.3"
 }
 
 group = "com.example"
@@ -19,7 +20,7 @@ repositories {
     maven { url = uri("https://repo.spring.io/milestone") }
 }
 
-extra["springAiVersion"] = "1.0.0-M2"
+extra["springAiVersion"] = "1.0.0-M3"
 extra["springModulithVersion"] = "1.2.4"
 
 dependencies {
