@@ -10,11 +10,19 @@ spring:
         model: all-minilm # Ref: https://github.com/spring-projects/spring-ai/issues/840
       embedding:
         model: all-minilm
+  modulith:
+    events:
+      jdbc:
+        schema-initialization:
+          enabled: true
   datasource:
     url: jdbc:postgresql://localhost:5432/postgres
     username: postgres
     password: postgres
     driver-class-name: org.postgresql.Driver
+  sql:
+    init:
+      mode: always
   docker:
     compose:
       lifecycle-management: start_and_stop

@@ -1,6 +1,6 @@
-package com.example.joshlong.api
+package com.example.joshlong.ai.api
 
-import com.example.joshlong.service.HelloService
+import com.example.joshlong.ai.service.HelloService
 import org.springframework.ai.document.Document
 import org.springframework.ai.embedding.EmbeddingModel
 import org.springframework.ai.embedding.EmbeddingResponse

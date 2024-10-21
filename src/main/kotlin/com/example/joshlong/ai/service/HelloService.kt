@@ -1,4 +1,4 @@
-package com.example.joshlong.service
+package com.example.joshlong.ai.service
 
 import org.springframework.ai.document.Document
 import org.springframework.ai.vectorstore.SearchRequest
