@@ -1,4 +1,4 @@
-package com.example.joshlong
+package com.example
 
 import org.junit.jupiter.api.Test
 import org.springframework.boot.test.context.SpringBootTest
@@ -6,11 +6,11 @@ import org.springframework.modulith.core.ApplicationModules
 import org.springframework.modulith.docs.Documenter
 
 @SpringBootTest
-class JoshlongSpringDemoKotlinApplicationTests {
+class DemoApplicationTests {
 
     @Test
     fun contextLoads() {
-        val applicationModules = ApplicationModules.of(JoshlongSpringDemoKotlinApplication::class.java)
+        val applicationModules = ApplicationModules.of(DemoApplication::class.java)
         println(applicationModules)
 
         // verify application module structure

@@ -1,4 +1,4 @@
-package com.example.joshlong.vet
+package com.example.vet
 
 import org.springframework.modulith.ApplicationModule
 import org.springframework.modulith.PackageInfo

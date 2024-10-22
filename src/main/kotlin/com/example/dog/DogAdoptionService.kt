@@ -1,6 +1,6 @@
-package com.example.joshlong.dog
+package com.example.dog
 
-import com.example.joshlong.dog.internal.DogAdoptionEvent
+import com.example.dog.internal.DogAdoptionEvent
 import org.springframework.context.ApplicationEventPublisher
 import org.springframework.data.repository.findByIdOrNull
 import org.springframework.stereotype.Service

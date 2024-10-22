@@ -1,4 +1,4 @@
-package com.example.joshlong.dog
+package com.example.dog
 
 import org.springframework.data.repository.ListCrudRepository
 

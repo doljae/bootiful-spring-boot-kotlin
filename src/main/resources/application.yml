@@ -1,6 +1,6 @@
 spring:
   application:
-    name: joshlong-spring-demo-kotlin
+    name: demo
   ai:
     vectorstore:
       pgvector:
@@ -30,7 +30,3 @@ spring:
   threads:
     virtual:
       enabled: true
-server:
-  tomcat:
-    threads:
-      max: 10

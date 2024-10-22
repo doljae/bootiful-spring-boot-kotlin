@@ -1,6 +1,6 @@
-package com.example.joshlong.vet
+package com.example.vet
 
-import com.example.joshlong.dog.internal.DogAdoptionEvent
+import com.example.dog.internal.DogAdoptionEvent
 import org.springframework.modulith.events.ApplicationModuleListener
 import org.springframework.stereotype.Service
 

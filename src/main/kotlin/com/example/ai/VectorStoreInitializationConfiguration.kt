@@ -1,6 +1,6 @@
-package com.example.joshlong.ai
+package com.example.ai
 
-import com.example.joshlong.dog.DogRepository
+import com.example.dog.DogRepository
 import org.springframework.ai.document.Document
 import org.springframework.ai.vectorstore.VectorStore
 import org.springframework.boot.context.event.ApplicationStartedEvent

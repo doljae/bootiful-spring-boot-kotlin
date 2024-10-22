@@ -1,4 +1,4 @@
-package com.example.joshlong.ai
+package com.example.ai
 
 import org.springframework.ai.chat.client.ChatClient
 import org.springframework.ai.document.Document

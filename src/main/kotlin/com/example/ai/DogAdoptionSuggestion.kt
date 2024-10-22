@@ -1,4 +1,4 @@
-package com.example.joshlong.ai
+package com.example.ai
 
 data class DogAdoptionSuggestion(
     val id: Int,
