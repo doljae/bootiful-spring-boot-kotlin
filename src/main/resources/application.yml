@@ -7,9 +7,9 @@ spring:
         initialize-schema: true
     ollama:
       chat:
-        model: all-minilm # Ref: https://github.com/spring-projects/spring-ai/issues/840
+        model: llama3.2
       embedding:
-        model: all-minilm
+        model: all-minilm # Ref: https://github.com/spring-projects/spring-ai/issues/840
   modulith:
     events:
       jdbc:
@@ -25,5 +25,8 @@ spring:
       mode: always
   docker:
     compose:
-      lifecycle-management: start_and_stop
+      lifecycle-management: start_only
       file: docker/compose.yml
+  threads:
+    virtual:
+      enabled: true

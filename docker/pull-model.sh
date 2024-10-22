@@ -10,6 +10,8 @@ pid=$!
 # Pause for Ollama to start.
 sleep 5
 
+echo "🔴 Retrieve llama3.2 model..."
+ollama pull llama3.2
 echo "🔴 Retrieve all-minilm model..."
 ollama pull all-minilm
 echo "🟢 Done!"
