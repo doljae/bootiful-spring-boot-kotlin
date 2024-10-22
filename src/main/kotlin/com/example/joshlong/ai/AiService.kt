@@ -12,8 +12,8 @@ class AiService(
     private val chatClient: ChatClient,
 ) {
 
-    fun similaritySearch(query: String): MutableList<Document>? {
-        return vectorStore.similaritySearch(SearchRequest.query(query).withTopK(2))
+    fun similaritySearch(query: String, size: Int): MutableList<Document>? {
+        return vectorStore.similaritySearch(SearchRequest.query(query).withTopK(size))
     }
 
     fun similaritySearchFromChatClient(query: String): String? {

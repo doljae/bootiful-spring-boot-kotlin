@@ -6,16 +6,20 @@ import org.springframework.ai.vectorstore.VectorStore
 import org.springframework.boot.context.event.ApplicationStartedEvent
 import org.springframework.context.annotation.Configuration
 import org.springframework.context.event.EventListener
+import org.springframework.jdbc.core.JdbcTemplate
 
 
 @Configuration
 class VectorStoreInitializationConfiguration(
     private val vectorStore: VectorStore,
     private val dogRepository: DogRepository,
+    private val jdbcTemplate: JdbcTemplate,
 ) {
 
     @EventListener(ApplicationStartedEvent::class)
     fun init() {
+        jdbcTemplate.update("delete from vector_store")
+
         val springRelatedDocuments = listOf(
             Document(
                 "Spring AI rocks!! Spring AI rocks!! Spring AI rocks!! Spring AI rocks!! Spring AI rocks!!",

@@ -14,12 +14,17 @@ class AiController(
 ) {
 
     @GetMapping("/similarity-search")
-    fun similaritySearch(@RequestParam query: String): MutableList<Document>? {
-        return aiService.similaritySearch(query)
+    fun similaritySearch(
+        @RequestParam query: String,
+        @RequestParam size: Int,
+    ): MutableList<Document>? {
+        return aiService.similaritySearch(query, size)
     }
 
     @GetMapping("/similarity-search/client")
-    fun similaritySearchFromChatClient(@RequestParam query: String): String? {
+    fun similaritySearchFromChatClient(
+        @RequestParam query: String,
+    ): String? {
         return aiService.similaritySearchFromChatClient(query)
     }
 

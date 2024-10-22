@@ -6,11 +6,11 @@ import org.springframework.web.bind.annotation.RestController
 import org.springframework.web.client.RestClient
 
 @RestController
-class VCController(
-    private val builder: RestClient.Builder,
+class VirtualThreadController(
+    builder: RestClient.Builder,
 ) {
 
-    private var restClient: RestClient = builder.build()
+    private val restClient = builder.build()
 
     @GetMapping("/vc")
     fun vc(@RequestParam delay: Int): String? {
