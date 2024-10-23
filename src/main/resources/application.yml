@@ -27,6 +27,10 @@ spring:
     compose:
       lifecycle-management: start_only
       file: docker/compose.yml
+      start:
+        skip: if_running
+      skip:
+        in-tests: false
   threads:
     virtual:
       enabled: true

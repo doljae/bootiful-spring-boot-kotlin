@@ -21,11 +21,4 @@ class TestcontainersConfiguration {
     fun pgvectorContainer(): PostgreSQLContainer<*> {
         return PostgreSQLContainer(DockerImageName.parse("pgvector/pgvector:pg16"))
     }
-
-    @Bean
-    @ServiceConnection
-    fun postgresContainer(): PostgreSQLContainer<*> {
-        return PostgreSQLContainer(DockerImageName.parse("postgres:latest"))
-    }
-
 }
