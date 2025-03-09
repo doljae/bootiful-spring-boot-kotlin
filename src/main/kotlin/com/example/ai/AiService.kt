@@ -13,7 +13,7 @@ class AiService(
 ) {
 
     fun similaritySearch(query: String, size: Int): MutableList<Document>? {
-        return vectorStore.similaritySearch(SearchRequest.query(query).withTopK(size))
+        return vectorStore.similaritySearch(SearchRequest.builder().query(query).topK(size).build())
     }
 
     fun similaritySearchFromChatClient(query: String): String? {
