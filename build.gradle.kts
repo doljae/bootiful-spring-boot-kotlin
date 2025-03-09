@@ -1,9 +1,9 @@
 plugins {
-    kotlin("jvm") version "1.9.25"
-    kotlin("plugin.spring") version "1.9.25"
-    id("org.springframework.boot") version "3.3.4"
-    id("io.spring.dependency-management") version "1.1.6"
-    id("org.graalvm.buildtools.native") version "0.10.3"
+    kotlin("jvm") version "2.1.10"
+    kotlin("plugin.spring") version "2.1.10"
+    id("org.springframework.boot") version "3.4.3"
+    id("io.spring.dependency-management") version "1.1.7"
+    id("org.graalvm.buildtools.native") version "0.10.5"
 }
 
 group = "com.example"
@@ -20,8 +20,8 @@ repositories {
     maven { url = uri("https://repo.spring.io/milestone") }
 }
 
-extra["springAiVersion"] = "1.0.0-M3"
-extra["springModulithVersion"] = "1.2.4"
+extra["springAiVersion"] = "1.0.0-M6"
+extra["springModulithVersion"] = "1.3.3"
 
 dependencies {
     implementation("org.springframework.boot:spring-boot-starter-data-jdbc")
